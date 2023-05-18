@@ -1,0 +1,1227 @@
+<!-- INICIO PARA TODAS AS FOLHAS -->
+<?xml version="1.0" encoding="windows-1252"?>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+<head>
+  <title>Projecto MD5610_P201_A_ACAB: sumario</title>
+  <link rel="stylesheet" type="text/css" href="../global/style.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<!-- Fatores de multiplicação para tempo de estimado -->
+<script type="text/javascript">
+var TotalTime = "00:00:00" 
+function TimeFactor(time,TPType) {
+    var factor = 1.1;
+	switch (TPType) {	
+	  case 'Desbaste Raster':
+	  case 'Raster Area Clearance':
+	 		factor = 1.15;
+	 		break;
+	  case 'Desbaste por Offset':
+	  case 'Offset Area Clearance':
+	      	factor = 1.15;
+	      	break;
+	  case 'Z Constante':
+	  case 'Constant Z':
+			factor = 1.1;
+			break;
+	  case 'Raster':
+			factor = 1.1;
+			break;
+	  case '3D Offset':
+			factor = 1.1;
+			break;
+	  case 'Canto Transversal':
+	  case 'Stitch Corner':
+	  		factor = 1.25;
+	  		break;
+	  case 'Ao longo da aresta':
+	  case 'Along Corner':
+			factor = 1.25;
+			break;
+	  case 'Canto Automático':		
+	  case 'Automatic Corner':
+	  		factor = 1.25;
+	  		break; 
+	}
+var t = time.split(':');
+var tseconds = (+t[0]) * 60 * 60 + (+t[1]) * 60 + (+t[2]);
+var tfactor = tseconds * factor;
+var hh = ~~(tfactor / 3600);
+var mm = ~~((tfactor % 3600) / 60);
+var ss = ~~tfactor % 60;
+if (hh < 10)
+{
+hh = "0"+hh;
+}
+if (mm < 10)
+{
+mm = "0"+mm;
+}
+if (ss < 10)
+{
+ss = "0"+ss;
+}
+// This formats your string to HH:MM:SS
+var t = hh+":"+mm+":"+ss;
+return t
+}
+//---------------------------------------------------
+//--------------------------------------------------
+function addTime(time1, time2) {
+var a = time1.split(':'); // split it at the colons
+var b = time2.split(':'); // split it at the colons
+// minutes are worth 60 seconds. Hours are worth 60 minutes.
+var aseconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
+var bseconds = (+b[0]) * 60 * 60 + (+b[1]) * 60 + (+b[2]);
+ 
+var ttime= aseconds + bseconds ;
+var hh = ~~(ttime / 3600);
+var mm = ~~((ttime % 3600) / 60);
+var ss = ~~ttime % 60;
+if (hh < 10)
+{
+hh = "0"+hh;
+}
+if (mm < 10)
+{
+mm = "0"+mm;
+}
+if (ss < 10)
+{
+ss = "0"+ss;
+}
+// This formats your string to HH:MM:SS
+var t = hh+":"+mm+":"+ss;
+return t
+}
+</script>
+<!------------------------------------------------------>
+<script type="text/javascript">
+	var txt = new String("70")
+ 	var Xlen = Number(txt.replace("," , "."))
+ 	var txt = new String("55")
+ 	var Ylen = Number(txt.replace("," , "."))
+	var txt = new String("42,19")
+ 	var Zlen = Number(txt.replace("," , "."))
+    var maxXYZ = Math.max(Xlen,Ylen,Zlen)
+</script>
+<!-- CABE?LHO TIPO -->
+<body>
+	<div class="a4page">
+		<table>
+			<tr>
+  				<td class="none"><img class="logo_image" src="../global/CompanyLogo.jpg" alt="PowerMILL" /></td>
+  				<td class="none" style="text-align:right"><img class="logo_image" src="../global/PMillLogo.jpg" alt="PowerMILL" /></td>
+  			</tr>
+		</table>
+		<table style="border-collapse: separate; border-spacing: 0.1px">
+  			<tr>
+  				<td width="30%" rowspan="7" colspan="3"><img class ="snapshot_header" src="../snapshots/IMG1.png"/></td>
+				<td width="30%" rowspan="7" colspan="3"><img class ="snapshot_header" src="../snapshots/IMG2.png"/></td>
+  				<th width="15%" class="title" colspan="2">MOLDE:</th>
+  				<td width="25%"class="title">5610</td>
+  			</tr>
+  			<tr>
+  				<th class="title" colspan="2">PEÇA:</th>
+  				<td class="title">201_A</td>
+   			</tr>
+   			<tr>
+   				<th colspan="2">DATA:</th>
+   				<td>2023-05-12</td>
+   			</tr>
+   			<tr>
+   				<th colspan="2">PROGRAMADOR:</th>
+    			<td >luisv</td>
+   			</tr>
+            <tr>
+                <th colspan="2">Posicao: </th>
+                <td class="vermelho" style="font-size:16px">ACAB_2POS</td>
+            </tr>
+            <tr>
+				<th colspan="2" >Material: </th>
+  				<td>05-TEMPERADO</td>
+   			</tr>
+			<tr>
+                <th colspan="2">Máquina: </th>
+                <td>G002_MC015_MC016_MC033_MC035</td>
+			</tr>
+			<tr>
+				<th width="5%" >Projeto: </th>
+  				<td colspan="5"><span class="wrapped">C:/Sessoes/MD-5610/ACAB/MD5610_P201_A_ACAB</span></td>
+			    <th colspan="2">Posicinamento: </th>
+  				<td class="vermelho" style="font-size:16px">
+				&nbsp;</td>
+			</tr>
+   			<tr>
+   			   	<th>DIM</th>
+    			<td colspan="3">
+    				<b><script type="text/javascript">
+            			document.write(Xlen.toFixed(3) + " x " + Ylen.toFixed(3) + " x " + Zlen.toFixed(3) )
+    				</script></b>
+    			</td>
+    			<th colspan="2">Dim. Inspeção Aço</th>
+    			<th colspan="2">Pos. Cavilha</th>
+    			<td >Check Centramento</td>
+			</tr>
+			<tr>
+   				<th>Xmin</th>
+    			<td>0</td>
+    			<th width="5%">Xmax</th>
+    			<td>70</td>
+    			<th width="5%">GalgX</th>
+    			<td class="azul">
+    				<script type="text/javascript">
+    				    var material = new String("05-TEMPERADO")
+    				    var XGalg = Xlen + (Math.max( 1, (Xlen < 1200 ? Math.min(maxXYZ, 1200) * (2.25/1000) * Math.pow((Math.min(maxXYZ, 1200)/ Xlen ),0.15) : 1200*(2.25/10000) * Math.pow((1200/1200),0.15))))
+                        document.write(XGalg.toFixed(1)) 
+    				</script>
+				</td>
+    			<th width="15px">X</th>
+    			<td>&nbsp;</td>
+    			<td>1º</td>
+   			</tr>
+   			<tr>
+   				<th>Ymin</th>
+    			<td>-55</td>
+    			<th>Ymax</th>
+    			<td>-0</td>
+    			<th>GalgY</th>
+    			<td class="azul">
+    			    <script type="text/javascript">
+    				    var YGalg = Ylen + (Math.max( 1, (Ylen < 1200 ? Math.min(maxXYZ, 1200) * (2.25/1000) * Math.pow((Math.min(maxXYZ, 1200)/ Ylen ),0.15) : 1200*(2.25/10000) * Math.pow((1200/1200),0.15))))
+                        document.write(YGalg.toFixed(1))
+                    </script>
+    			</td>
+    			<th>Y</th>
+    			<td>&nbsp;</td>
+    			<td>2º</td>
+   			</tr>
+   			<tr>
+ 				<th>Zmin</th>
+    			<td>-0</td>
+    			<th>Zmax</th>
+    			<td>42,19</td>
+    			<th>GalgZ</th>
+    			<td class="azul">
+	    			<script type="text/javascript">
+    				    var ZGalg = Zlen + (Math.max( 1, (Zlen < 1200 ? Math.min(maxXYZ, 1200) * (2.25/1000) * Math.pow((Math.min(maxXYZ, 1200)/ Zlen ),0.15) : 1200*(2.25/10000) * Math.pow((1200/1200),0.15))))
+                        document.write(ZGalg.toFixed(1))
+    				</script>
+    			</td>
+    			<th>Z</th>
+    			<td>&nbsp;</td>
+    			<td>3º</td>
+   			</tr>
+   			<tr>
+   				<td class="TopLeft" colspan="9"><span style="font-size:16px"><i><b>
+				Notas: </b></i></span><br />USAR MESA FCS M6</td>
+   			</tr>
+		</table>
+		<table>
+			<tr>
+				<td class="small_rgt" id="pdTime"><b>verificar tempo</b></td>
+			</tr>
+		
+		</table>
+		<!-- FIM DO CABE?LHO TIPO -->
+<!-- TABELA DE CAMPOS -->		
+		
+		<table style="text-align:center">
+		<thead>
+			<tr>
+				<th class="center" >ASS.</th>
+				<th class="center" width="95">Programa</th>
+				<th class="center" width="35">T</th>
+				<th class="center" width="85" >Ferramenta</th>
+				<th class="center">Ø</th>
+				<th class="center">RC</th>					
+				<th class="center" width="35">ID Cone</th>
+                <th class="center" width="35">H Total</th>
+				<th class="center" width="35">H RESP.</th>
+				<th class="center">ZMin</th>
+				<th class="center">ap/ae</th>				
+				<th class="center" width="55">STK(xy/z)</th>
+				<th class="center">Comentário</th>
+                <th class="center">F</th>
+                <th class="center">RPM</th>
+                <th class="center">Tempo</th>
+                <th class="center">WKPL</th>
+				<th class="center" width="60">Notas</th>
+     		</tr>
+     		</thead>
+		  	
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A15</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 141<"999") {
+       		      		document.write(" 141")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>RC25RT2Z4M_D</b></td>
+    		    <td>25</td>
+    		    <td>&nbsp;</td>    		      		        
+    		    <td>CT25L090_G002</td> 
+		    <td class="vermelho"><b>125</b></td>                   
+		    <td><script type="text/javascript">	
+				if (35<125) {
+       		      			document.write("35")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">42,59</td>
+    		    <td>0,15/14</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Desbaste Raster")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0,2/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Desbaste Raster")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Desbaste Raster &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>6000</td>
+			<td>1400</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:13:46","Desbaste Raster"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:13:46","Desbaste Raster"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A16</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 8<"999") {
+       		      		document.write(" 8")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>TR08R0.5L35Z4_D</b></td>
+    		    <td>8</td>
+    		    <td>0,5</td>    		      		        
+    		    <td>CT08L075_SK40</td> 
+		    <td class="vermelho"><b>40</b></td>                   
+		    <td><script type="text/javascript">	
+				if (35<40) {
+       		      			document.write("35")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">20,04</td>
+    		    <td>0,12/5</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Desbaste por Offset")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0,2/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Desbaste por Offset")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Desbaste por Offset &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>2200</td>
+			<td>5500</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:12:40","Desbaste por Offset"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:12:40","Desbaste por Offset"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A17</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 131<"999") {
+       		      		document.write(" 131")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>TR03R0.2L20Z4_D</b></td>
+    		    <td>3</td>
+    		    <td>0,2</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (20<30) {
+       		      			document.write("20")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">25,05</td>
+    		    <td>0,05/1,5</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Desbaste por Offset")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0,2/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Desbaste por Offset")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Desbaste por Offset &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>1000</td>
+			<td>9000</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:42:45","Desbaste por Offset"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:42:45","Desbaste por Offset"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A18</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 163<"999") {
+       		      		document.write(" 163")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>ESF06L18Z4_AP</b></td>
+    		    <td>6</td>
+    		    <td>3</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (9<30) {
+       		      			document.write("9")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">41,44</td>
+    		    <td>&nbsp;/0,2</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Raster")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0,1/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Raster")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Raster &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>3156</td>
+			<td>11002</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:05:09","Raster"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:05:09","Raster"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A19</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 218<"999") {
+       		      		document.write(" 218")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>ESF06L18Z4_A</b></td>
+    		    <td>6</td>
+    		    <td>3</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (9<30) {
+       		      			document.write("9")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">41,34</td>
+    		    <td>&nbsp;/0,12</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Raster")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Raster")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Raster &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>3153</td>
+			<td>10992</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:08:35","Raster"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:08:35","Raster"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A20</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 168<"999") {
+       		      		document.write(" 168")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>ESF01.5L4.5Z4_AP</b></td>
+    		    <td>1,5</td>
+    		    <td>0,75</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (4,5<30) {
+       		      			document.write("4,5")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">39,6</td>
+    		    <td>&nbsp;/0,06</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Raster")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0,1/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Raster")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Raster &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>752</td>
+			<td>10949</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:00:22","Raster"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:00:22","Raster"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A21</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 223<"999") {
+       		      		document.write(" 223")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>ESF01.5L4.5Z4_A</b></td>
+    		    <td>1,5</td>
+    		    <td>0,75</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (4,5<30) {
+       		      			document.write("4,5")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">38,96</td>
+    		    <td>&nbsp;/0,05</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Raster")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Raster")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Raster &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>752</td>
+			<td>10949</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:00:33","Raster"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:00:33","Raster"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A22</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 166<"999") {
+       		      		document.write(" 166")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>ESF03L9Z4_AP</b></td>
+    		    <td>3</td>
+    		    <td>1,5</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (9<30) {
+       		      			document.write("9")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">33,85</td>
+    		    <td>&nbsp;/0,1</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("3D Offset")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0,1/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("3D Offset")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("3D Offset &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>1996</td>
+			<td>11013</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:05:49","3D Offset"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:05:49","3D Offset"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A23</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 168<"999") {
+       		      		document.write(" 168")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>ESF01.5L4.5Z4_AP</b></td>
+    		    <td>1,5</td>
+    		    <td>0,75</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (4,5<30) {
+       		      			document.write("4,5")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">33,76</td>
+    		    <td>&nbsp;/&nbsp;</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Canto Multipencil")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0,01/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Canto Multipencil")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Canto Multipencil &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>752</td>
+			<td>10949</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:03:39","Canto Multipencil"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:03:39","Canto Multipencil"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A24</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 226<"999") {
+       		      		document.write(" 226")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>ESF03L13Z2_A</b></td>
+    		    <td>3</td>
+    		    <td>1,5</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (13<30) {
+       		      			document.write("13")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">33,75</td>
+    		    <td>&nbsp;/0,08</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("3D Offset")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("3D Offset")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("3D Offset &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>1529</td>
+			<td>11045</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:09:35","3D Offset"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:09:35","3D Offset"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A25</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 131<"999") {
+       		      		document.write(" 131")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>TR03R0.2L20Z4_D</b></td>
+    		    <td>3</td>
+    		    <td>0,2</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (20<30) {
+       		      			document.write("20")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">19,89</td>
+    		    <td>&nbsp;/0,05</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Inclinado e Raso")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0,1/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Inclinado e Raso")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Inclinado e Raso &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>1000</td>
+			<td>9000</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:28:01","Inclinado e Raso"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:28:01","Inclinado e Raso"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A26</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 87<"999") {
+       		      		document.write(" 87")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>TR03R0.2L20Z4_A</b></td>
+    		    <td>3</td>
+    		    <td>0,2</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (20<30) {
+       		      			document.write("20")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">19,77</td>
+    		    <td>&nbsp;/0,05</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Inclinado e Raso")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Inclinado e Raso")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Inclinado e Raso &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>1000</td>
+			<td>9000</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:29:38","Inclinado e Raso"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:29:38","Inclinado e Raso"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A27</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 87<"999") {
+       		      		document.write(" 87")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>TR03R0.2L20Z4_A</b></td>
+    		    <td>3</td>
+    		    <td>0,2</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (20<30) {
+       		      			document.write("20")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">25,55</td>
+    		    <td>&nbsp;/0,05</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Inclinado e Raso")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Inclinado e Raso")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Inclinado e Raso &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>1000</td>
+			<td>9000</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:06:01","Inclinado e Raso"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:06:01","Inclinado e Raso"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+		  	
+  
+    		<tr> 
+    		    <td style="width:1cm"><input type="checkbox"/></td>
+    		    <td><b><span class="wrapped">5610A201_A28</span></b></td>
+		    <td><script type="text/javascript">	
+			if ( 9<"999") {
+       		      		document.write(" 9")
+			}				
+    		    </script></td> 
+    		    <td class="vermelho"><b>TR06R0.5L25Z4_D</b></td>
+    		    <td>6</td>
+    		    <td>0,5</td>    		      		        
+    		    <td>CT06L075_SK40</td> 
+		    <td class="vermelho"><b>30</b></td>                   
+		    <td><script type="text/javascript">	
+				if (25<30) {
+       		      			document.write("25")
+				}								
+    		    </script></td> 
+       	        <td  nowrap="nowrap">38,79</td>
+    		    <td>0,1/&nbsp;</td>
+    		<td>
+                <script type="text/javascript">
+    		    	var txt = new String("Z Constante")
+       		    	if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+       		      		document.write("&nbsp;/&nbsp;")
+				  		}
+					else {
+    		        	document.write("0/&nbsp;")
+             			}
+    			</script>
+            </td>
+		    <td>
+                <script type="text/javascript">
+                var txt = new String("Z Constante")
+                if (txt == "Drilling" || txt.indexOf("Fura") >= 0 ) {
+                            document.write("&nbsp;")   
+                            }
+                else {
+                            document.write("Z Constante &nbsp;")
+                        }
+                </script>
+            </td>
+    		<td>1800</td>
+			<td>6000</td>       		    
+    		<td>
+    		    <script type="text/javascript">
+					document.write(TimeFactor("0:02:23","Z Constante"))
+					TotalTime = addTime(TotalTime, TimeFactor("0:02:23","Z Constante"))
+				</script>
+    		</td>
+		    <td>
+	           	<script type="text/javascript">				
+      				var txt = new String("(3+2)-eixos") 
+      				if (txt == "3-eixos" || txt == "3-axis"){ 
+      				 document.write ("(3x   )"); 
+      				 }
+      				else if (txt == "(3+2)-eixos" || txt == "(3+2)-axis"){ 
+      				 document.write ("(3+2) ");
+      				  }
+					else if (txt == "5-eixos" || txt == "5-axis"){ 
+					 document.write ("(5x  )");
+					  }
+    			</script>
+    		    	2POS</td>                
+    		   <td>&nbsp; &nbsp;</td>    			
+		  </tr>
+			
+
+	  	</table>
+			<script type="text/javascript">
+				document.getElementById("pdTime").innerHTML = "<b>Tempo Total: " +TotalTime+"</b>";
+			</script>
+<!-- RODAPE PARA TODAS AS FOLHAS -->
+<!-- FIM DE RODAPE -->
+</div>
+</body>
